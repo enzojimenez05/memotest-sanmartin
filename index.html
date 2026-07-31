@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memotest - General José de San Martín</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Fuente -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Fondo -->
+    <div class="background"></div>
+
+    <!-- Sol -->
+    <div class="sun"></div>
+
+    <!-- Encabezado -->
+    <header>
+
+        <img src="img/escudo.png" class="escudo" alt="Escudo Argentino">
+
+        <div>
+
+            <h1>Memotest del General José de San Martín</h1>
+
+            <p>
+                Encontrá las parejas y descubrí el pensamiento del Padre de la Patria.
+            </p>
+
+        </div>
+
+        <img src="img/sanmartin.png" class="sanmartin" alt="General San Martín">
+
+    </header>
+
+    <!-- Tablero -->
+
+    <main>
+
+        <section id="tablero">
+
+        </section>
+
+    </main>
+
+    <!-- Ventana emergente -->
+
+    <div id="popup" class="popup oculto">
+
+        <div class="popup-contenido">
+
+            <h2>¡Muy bien!</h2>
+
+            <p id="frase"></p>
+
+            <hr>
+
+            <p id="explicacion"></p>
+
+            <button id="continuar">
+                Continuar
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- Pantalla Final -->
+
+    <div id="victoria" class="popup oculto">
+
+        <div class="popup-contenido victoria">
+
+            <img src="img/sanmartin.png">
+
+            <h2>¡Felicitaciones!</h2>
+
+            <p>
+                Has encontrado todas las frases del General José de San Martín.
+            </p>
+
+            <button onclick="reiniciarJuego()">
+
+                Jugar nuevamente
+
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- Confeti -->
+
+    <canvas id="confetti"></canvas>
+
+    <!-- Audio -->
+
+    <audio id="musica" loop>
+        <source src="audio/fondo.mp3" type="audio/mp3">
+    </audio>
+
+    <audio id="acierto">
+        <source src="audio/acierto.mp3" type="audio/mp3">
+    </audio>
+
+    <audio id="error">
+        <source src="audio/error.mp3" type="audio/mp3">
+    </audio>
+
+    <audio id="aplausos">
+        <source src="audio/aplausos.mp3" type="audio/mp3">
+    </audio>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
